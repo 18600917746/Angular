@@ -1,0 +1,20 @@
+<h2>
+  <input type="text" [(ngModel)]="input" (keyup)="keyAddList($event)"/>
+  <button type="button" (click)="keyAddList()">添加</button>
+</h2>
+<h2>未完成</h2>
+<ul>
+  <li *ngFor="let item of list;let key = index;">
+    <input type="checkbox" [(ngModel)]="item.status" (change)="chenge(key)"/> {{item.name }}--{{item.status}}
+    <button type="button" (click)="dleList(key)">删除</button>
+  </li>
+</ul>
+<h2>已完成</h2>
+<ul>
+  <li *ngFor="let item of wcList;let key = index;">
+    <input type="checkbox" disabled="!item.status" [(ngModel)]="item.status" (change)="chenge(key)"/> {{item.name }}--{{item.status}}
+    <button type="button" (click)="dleList(key)">删除</button>
+  </li>
+</ul>
+<button type="button" (click)="routerNavigate()">编程式路由跳转</button>
+<button type="button" (click)="routerNavigateGet()">编程式路GET传参路由跳转</button>

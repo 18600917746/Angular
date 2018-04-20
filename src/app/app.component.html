@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-header [title]="title" [runFun]="runFun" (parent)="parentFun($event)" #header></app-header>
+<ul>
+  <li><a routerLink="/events" routerLinkActive="routeActive">events</a></li>
+  <li><a routerLink="/forms" routerLinkActive="routeActive">forms</a></li>
+  <li><a routerLink="/get-post-jsonp" routerLinkActive="routeActive">get-post-jsonp</a></li>
+  <li><a routerLink="/news" routerLinkActive="routeActive">news</a></li>
+  <li><a routerLink="/todolist/1" routerLinkActive="routeActive">todolist1</a></li>
+  <li><a routerLink="/todolist/2" routerLinkActive="routeActive">todolist2</a></li>
+  <li><a routerLink="/todolist/3" routerLinkActive="routeActive">todolist3</a></li>
+  <li><a routerLink="/todolist/4" routerLinkActive="routeActive">todolist4</a></li>
+</ul>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

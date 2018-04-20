@@ -1,0 +1,34 @@
+<h2 style="text-align: center">
+  <br>
+  数据的绑定
+  <br>
+  {{title}}--{{str}}
+  <br>
+  属性的绑定 - 属性绑定书写的两种方式
+  <br>
+
+  <div id="{{id}}" [title]="title">这是测试属性是否绑定</div>
+  <br>
+  后台的 html 结构解析
+  <span [innerHTML]="h"></span>
+  <app-header [title]="title" [runFun]="runFun" (parent)="parentFun($event)" #header></app-header>
+  <button type="button" (click)="header.run()">父组件主动执行子组件的方法</button>
+  <button type="button" (click)="getChildData()">父组件调用自己的方法取回数据</button>
+  <br>
+  数组数据的 渲染
+  <br>
+  <ul>
+    <li *ngFor="let item of arr;let key=index">{{item}}--{{key}}</li>
+  </ul>
+
+
+  <br>
+  <br>
+  <br>
+  对象数据的 渲染
+  <br>
+  <ul>
+    <li >{{obj | json}}</li>
+  </ul>
+  <br>
+</h2>
